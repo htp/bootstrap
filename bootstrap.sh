@@ -32,10 +32,10 @@ install_dotfiles() {
 
   if [ -d "${HOME}/Projects/dotfiles" ]; then
     pushd "${HOME}/Projects/dotfiles"
-    git pull
+    /usr/bin/git pull
     popd
   else
-    git clone https://github.com/htp/dotfiles.git "${HOME}/Projects/dotfiles"
+    /usr/bin/git clone https://github.com/htp/dotfiles.git "${HOME}/Projects/dotfiles"
   fi
 
   for directory in ${HOME}/Projects/dotfiles/*/; do
