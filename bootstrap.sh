@@ -35,7 +35,7 @@ install_dotfiles() {
     /usr/bin/git pull
     popd
   else
-    /usr/bin/git clone https://github.com/htp/dotfiles.git "${HOME}/Projects/dotfiles"
+    /usr/bin/git clone --recurse-submodules https://github.com/htp/dotfiles.git "${HOME}/Projects/dotfiles"
   fi
 
   for directory in ${HOME}/Projects/dotfiles/*/; do
